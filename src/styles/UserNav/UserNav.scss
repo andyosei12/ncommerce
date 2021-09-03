@@ -1,0 +1,19 @@
+.usernav {
+  display: flex;
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    & h3 {
+      font-size: 1.5rem;
+    }
+  }
+  &__user-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-grey-dark-2);
+  }
+}

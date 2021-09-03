@@ -1,5 +1,12 @@
+import { Fragment } from "react";
+import Header from "./Layouts/Header";
+
 function App() {
-  return <div>Ecommenrce Site</div>;
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 }
 
 export default App;

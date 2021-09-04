@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Header from "./components/Layouts/Header";
 import ActivityTab from "./components/ActivityTab";
+import AvailableProduct from "./components/ProductList/AvailableProducts";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <ActivityTab />
+        <AvailableProduct />
       </main>
     </Fragment>
   );

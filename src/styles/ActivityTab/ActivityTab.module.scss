@@ -1,12 +1,13 @@
 .activity {
   font-size: 1.3rem;
   padding: 0.3rem 5rem;
-  margin-top: var(--margin-top--2);
+  margin-top: 12rem;
   color: var(--color-grey-dark-3);
   display: flex;
 
   &__tab {
     cursor: pointer;
+    transition: all 0.3s ease;
 
     &:not(:last-child) {
       margin-right: 2rem;

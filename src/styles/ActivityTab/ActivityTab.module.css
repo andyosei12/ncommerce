@@ -1,7 +1,7 @@
 .activity {
   font-size: 1.3rem;
   padding: 0.3rem 5rem;
-  margin-top: var(--margin-top--2);
+  margin-top: 12rem;
   color: var(--color-grey-dark-3);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,6 +10,8 @@
 
 .activity__tab {
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .activity__tab:not(:last-child) {

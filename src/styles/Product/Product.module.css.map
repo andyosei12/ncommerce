@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,WAAW;EACpB,UAAU,EAAE,oBAAoB;EAChC,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,aAAa;CAC/B",
+    "sources": [
+        "Product.module.scss"
+    ],
+    "names": [],
+    "file": "Product.module.css"
+}

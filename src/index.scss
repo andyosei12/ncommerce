@@ -1,7 +1,7 @@
 :root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #ff3366;
-  --color-primary-dark: #ba265d;
+  --color-primary: #95eec3;
+  --color-primary-light: #61e5a5;
+  --color-primary-dark: #22d37d;
 
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -13,6 +13,9 @@
   --color-grey-dark-3: #999;
 
   --line: 1px solid var(--color-grey-light-2);
+
+  --margin-top--1: 1.5rem;
+  --margin-top--2: 3rem;
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);

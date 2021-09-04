@@ -1,8 +1,8 @@
-import SearchInput from "../components/SearchInput";
-import UserNav from "../components/UserNav";
+import SearchInput from "../SearchInput";
+import UserNav from "../UserNav";
 
-import styles from "../styles/Header/Header.module.css";
-import logo from "../assets/images/logo_transparent.png";
+import styles from "../../styles/Header/Header.module.css";
+import logo from "../../assets/images/logo_transparent.png";
 
 const Header = () => {
   return (

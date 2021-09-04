@@ -1,0 +1,21 @@
+.activity {
+  font-size: 1.3rem;
+  padding: 0.3rem 5rem;
+  margin-top: var(--margin-top--2);
+  color: var(--color-grey-dark-3);
+  display: flex;
+
+  &__tab {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &:hover {
+      color: var(--color-grey-dark-1);
+      padding-bottom: 0.5rem;
+      border-bottom: 0.25rem solid var(--color-primary-dark);
+    }
+  }
+}

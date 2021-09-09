@@ -12,16 +12,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 40rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: relative;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  cursor: pointer;
 }
 
 .card:hover {

@@ -1,0 +1,14 @@
+.input {
+  &__label {
+    margin-right: 1.3rem;
+  }
+
+  &__box {
+    padding: 0.7rem 0.7rem;
+    border: 0.15rem solid var(--color-primary-dark);
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

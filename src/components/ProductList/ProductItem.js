@@ -3,6 +3,9 @@ import styles from "../../styles/Product/ProductItem.module.css";
 import CartForm from "../CartForm";
 
 const ProductItem = (props) => {
+  const addProductToCart = (amount) => {
+    console.log("Item added");
+  };
   return props.products.map((product) => (
     <Card key={product.id}>
       <div className={styles["product-item__image-container"]}>
@@ -20,7 +23,7 @@ const ProductItem = (props) => {
           </p>
           <h3 className={styles["product-item__price"]}>GHC {product.price}</h3>
         </div>
-        <CartForm />
+        <CartForm onAddToCart={addProductToCart} id={product.id} />
       </div>
     </Card>
   ));

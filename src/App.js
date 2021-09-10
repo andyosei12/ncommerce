@@ -1,17 +1,17 @@
-import { Fragment } from "react";
 import Header from "./components/Layouts/Header";
 import ActivityTab from "./components/ActivityTab";
 import AvailableProduct from "./components/ProductList/AvailableProducts";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   return (
-    <Fragment>
+    <CartProvider>
       <Header />
       <main>
         <ActivityTab />
         <AvailableProduct />
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 

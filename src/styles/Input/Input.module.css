@@ -10,4 +10,8 @@
 .input__box:focus {
   outline: none;
 }
+
+.input__box-invalid {
+  border: 0.15rem solid red;
+}
 /*# sourceMappingURL=Input.module.css.map */

@@ -11,4 +11,8 @@
       outline: none;
     }
   }
+
+  &__box-invalid {
+    border: 0.15rem solid red;
+  }
 }

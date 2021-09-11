@@ -55,11 +55,17 @@ const products = [
 ];
 
 const AvailableProduct = (props) => {
-  return (
-    <div className={styles.product}>
-      <ProductItem products={products} />
-    </div>
-  );
+  const dummyProducts = products.map((product) => (
+    <ProductItem
+      id={product.id}
+      key={product.id}
+      name={product.name}
+      company={product.company}
+      price={product.price}
+      image={product.image}
+    />
+  ));
+  return <div className={styles.product}>{dummyProducts}</div>;
 };
 
 export default AvailableProduct;

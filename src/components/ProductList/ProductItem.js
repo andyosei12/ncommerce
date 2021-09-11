@@ -1,10 +1,20 @@
+import { useContext } from "react";
+
+import CartContext from "../../store/cart-context";
 import Card from "../UI/Card";
 import styles from "../../styles/Product/ProductItem.module.css";
 import CartForm from "../CartForm";
 
 const ProductItem = (props) => {
+  const cartCtx = useContext(CartContext);
+  const price = props.price.toFixed(2);
   const addProductToCart = (amount) => {
-    console.log("Item added");
+    cartCtx.addToCart({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      price: price,
+    });
   };
   return (
     <Card>
@@ -21,7 +31,7 @@ const ProductItem = (props) => {
           <p className={styles["product-item__company"]}>
             Offered by: {props.company}
           </p>
-          <h3 className={styles["product-item__price"]}>GHC {props.price}</h3>
+          <h3 className={styles["product-item__price"]}>GHC {price}</h3>
         </div>
         <CartForm onAddToCart={addProductToCart} id={props.id} />
       </div>

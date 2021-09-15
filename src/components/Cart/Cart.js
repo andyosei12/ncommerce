@@ -12,6 +12,13 @@ const Cart = (props) => {
 
   const hasItems = cartCtx.items.length > 0;
 
+  const addToCartHandler = (item) => {
+    cartCtx.addToCart({
+      ...item,
+      amount: 1,
+    });
+  };
+
   const cartItems = cartCtx.items.map((item) => (
     <CartItem
       key={item.id}
@@ -19,6 +26,7 @@ const Cart = (props) => {
       qty={item.amount}
       name={item.name}
       price={item.price}
+      onAddToCart={addToCartHandler.bind(null, item)}
     />
   ));
   return (

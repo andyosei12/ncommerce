@@ -14,6 +14,7 @@ const ProductItem = (props) => {
       name: props.name,
       amount: amount,
       price: price,
+      image: props.image,
     });
   };
   return (

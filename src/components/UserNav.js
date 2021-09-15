@@ -1,8 +1,8 @@
-import Cart from "./Cart";
+import HeaderCartButton from "./Layouts/HeaderCartButton";
 import usericon from "../assets/images/sprite.svg";
 import styles from "../styles/UserNav/UserNav.module.css";
 
-const UserNav = () => {
+const UserNav = (props) => {
   return (
     <div className={styles.usernav}>
       <div className={styles["usernav__user"]}>
@@ -11,7 +11,7 @@ const UserNav = () => {
         </svg>
         <h3>Account</h3>
       </div>
-      <Cart />
+      <HeaderCartButton onOpenCart={props.onOpenCart} />
     </div>
   );
 };

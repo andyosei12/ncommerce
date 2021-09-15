@@ -19,6 +19,10 @@ const Cart = (props) => {
     });
   };
 
+  const removeFromCartHandler = (id) => {
+    cartCtx.removeFromCart(id);
+  };
+
   const cartItems = cartCtx.items.map((item) => (
     <CartItem
       key={item.id}
@@ -27,6 +31,7 @@ const Cart = (props) => {
       name={item.name}
       price={item.price}
       onAddToCart={addToCartHandler.bind(null, item)}
+      onRemoveFromCart={removeFromCartHandler.bind(null, item.id)}
     />
   ));
   return (
@@ -39,12 +44,23 @@ const Cart = (props) => {
       )}
       <ul className={styles.cart}>{cartItems}</ul>
       <div className={styles["cart__cta"]}>
-        <button
-          className={styles["cart__cta--back"]}
-          onClick={props.onCloseCart}
-        >
-          Continue Shopping
-        </button>
+        {!hasItems && (
+          <button
+            className={styles["cart__cta--back"]}
+            onClick={props.onCloseCart}
+          >
+            Start Shopping
+          </button>
+        )}
+        {hasItems && (
+          <button
+            className={styles["cart__cta--back"]}
+            onClick={props.onCloseCart}
+          >
+            Continue Shopping
+          </button>
+        )}
+
         <div className={styles["cart__total"]}>
           <h5>Total:</h5>
           <h5 className={styles["cart__total-amount"]}>GHC {totalAmount}</h5>

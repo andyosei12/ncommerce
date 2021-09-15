@@ -13,9 +13,19 @@ const CartItem = (props) => {
       </div>
       <h3 className={styles["cart-item__price"]}>GHC {props.price}</h3>
       <div className={styles["cart-item__actions"]}>
-        <button className={styles["cart-item__actions-btn"]}> - </button>
+        <button
+          className={styles["cart-item__actions-btn"]}
+          onClick={props.onRemoveFromCart}
+        >
+          -
+        </button>
         <span className={styles["cart-item__actions-qty"]}>{props.qty}</span>
-        <button className={styles["cart-item__actions-btn"]}> + </button>
+        <button
+          className={styles["cart-item__actions-btn"]}
+          onClick={props.onAddToCart}
+        >
+          +
+        </button>
       </div>
     </li>
   );

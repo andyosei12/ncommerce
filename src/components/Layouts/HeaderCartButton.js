@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import CartContext from "../store/cart-context";
+import CartContext from "../../store/cart-context";
 
-import carticon from "../assets/images/sprite.svg";
-import styles from "../styles/Cart/Cart.module.css";
+import carticon from "../../assets/images/sprite.svg";
+import styles from "../../styles/HeaderCartButton/HeaderCartButton.module.css";
 
-const Cart = () => {
+const HeaderCartButton = (props) => {
   const cartCtx = useContext(CartContext);
   const { items } = cartCtx;
   const totalQty = items.reduce(
@@ -13,7 +13,7 @@ const Cart = () => {
     0
   );
   return (
-    <div className={styles.cart}>
+    <div className={styles.cart} onClick={props.onOpenCart}>
       <svg className={styles["cart__cart-icon"]}>
         <use xlinkHref={`${carticon}#icon-shopping-cart`}></use>
       </svg>
@@ -23,4 +23,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default HeaderCartButton;

@@ -6,7 +6,10 @@ import ModalOverlay from "./ModalOverlay";
 const Modal = (props) => {
   return (
     <Fragment>
-      {ReactDom.createPortal(<Backdrop />, document.getElementById("backdrop"))}
+      {ReactDom.createPortal(
+        <Backdrop onCloseCart={props.onCloseCart} />,
+        document.getElementById("backdrop")
+      )}
       {ReactDom.createPortal(
         <ModalOverlay>{props.children}</ModalOverlay>,
         document.getElementById("modaloverlay")
